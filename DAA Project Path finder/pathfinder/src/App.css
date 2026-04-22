@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Glass Card */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+/* Node base */
+.node {
+  width: 25px;
+  height: 25px;
+  margin: 1px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Special Nodes */
+.start {
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.end {
+  background: #ff4b5c;
+  box-shadow: 0 0 10px #ff4b5c;
+}
+
+.wall {
+  background: #222;
+}
+
+/* Animation */
+.visited {
+  background: #4facfe;
+  animation: visit 0.3s ease;
+}
+
+.path {
+  background: yellow;
+  box-shadow: 0 0 8px yellow;
+  animation: pathAnim 0.3s ease;
+}
+
+/* Animations */
+@keyframes visit {
+  0% {
+    transform: scale(0.3);
+    background: #a18cd1;
+  }
+  100% {
+    transform: scale(1);
+    background: #4facfe;
+  }
+}
+
+@keyframes pathAnim {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
